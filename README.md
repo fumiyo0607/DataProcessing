@@ -10,3 +10,6 @@
 ## Model
  - SASRec
  - KGAN
+
+## 各Modelにおけるデータ整形
+ - [KGAN](https://github.com/fumiyo0607/DataProcessing/wiki/KGAN)

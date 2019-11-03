@@ -439,4 +439,4 @@ with open(kg_final_file, mode='a') as f:
         f.write(' '.join(line))
         f.write('\n')
 
-print('All Prodeses Done ...!')
+print('All Done ...!')

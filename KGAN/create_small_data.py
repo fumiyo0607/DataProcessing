@@ -12,7 +12,7 @@ Config
 data_set = 'last-fm'
 user_num = 1000
 
-kg_df = pd.read_csv('../{}/kg_final.txt'.format(data_set), sep=' ', header=None, names=['e_h', 'r', 'e_t'])
+kg_df = pd.read_csv('./data/{}/kg_final.txt'.format(data_set), sep=' ', header=None, names=['e_h', 'r', 'e_t'])
 
 '''
 *************************
@@ -23,7 +23,7 @@ entity data の読み込み
 org_id_list = []
 remap_id_list = []
 
-f = open('../{}/entity_list.txt'.format(data_set))
+f = open('./data/{}/entity_list.txt'.format(data_set))
 line = f.readline()
 
 while line:
@@ -83,7 +83,7 @@ item を freebase_id を使って書き変えるための準備
 *************************
 '''
 
-item_df = pd.read_csv('../{}/item_list.txt'.format(data_set), sep=' ')
+item_df = pd.read_csv('./data/{}/item_list.txt'.format(data_set), sep=' ')
 
 i_map = defaultdict(str)
 
@@ -105,7 +105,7 @@ train.txt のデータを 指定サイズ (user_num) で分割し， item を fr
 '''
 
 train_data = defaultdict(list)
-f = open('../{}/train.txt'.format(data_set))
+f = open('./data/{}/train.txt'.format(data_set))
 line = f.readline()
 
 user_count = 0
@@ -187,10 +187,9 @@ delete_user_train_df['item_id'] = delete_user_train_df['item_id'].map(convert_it
 test.txt のデータを 指定サイズ (user_num) で分割し， item を freebase_id を使って書き換え 
 *************************
 '''
-user_num = 1000
 
 test_data = defaultdict(list)
-f = open('../{}/test.txt'.format(data_set))
+f = open('./data/{}/test.txt'.format(data_set))
 line = f.readline()
 
 user_count = 0
@@ -395,7 +394,7 @@ short_user_kg_e_t = list(short_user_kg_df['e_t'])
 
 # ファイルへ書き出し
 
-file_path = '../{}_small_data_usernum={}'.format(data_set, user_num)
+file_path = './small_data/{}_usernum={}'.format(data_set, user_num)
 
 if not os.path.exists(file_path): os.makedirs(file_path)
 

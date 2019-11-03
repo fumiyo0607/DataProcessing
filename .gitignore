@@ -4,6 +4,4 @@ processing_data/
 movie_lens/ml-1m/.DS_Store
 data/
 *.txt
-/KGAN/amazon-book
-/KGAN/yelp2018
-/KGAN/last-fm
+/KGAN/small_data/

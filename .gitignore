@@ -2,5 +2,8 @@
 processing_data/
 .ipynb_checkpoints/
 movie_lens/ml-1m/.DS_Store
-*/data/*
+data/
 *.txt
+/KGAN/amazon-book
+/KGAN/yelp2018
+/KGAN/last-fm
